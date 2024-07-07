@@ -1,0 +1,86 @@
+.custom-card {
+    width: 85%;
+    margin-right: 15%;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.custom-card {
+    background-color: var(--card-primary-color);
+    color: #fff;
+}
+
+
+.circle-bullet {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: #7BA23F;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.floating-menu {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.floating-menu a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.floating-menu a.active {
+    background-color: #7BA23F;
+    border-radius: 20px;
+}
+
+@media (max-width: 576px) {
+    .circle-bullet {
+        width: 0.5em;
+        height: 0.5em;
+    }
+}
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1rem; 
+    }
+    
+
+    .list-unstyled li,.mb-3 h6 {
+        font-size: 0.8rem; 
+    }
+    .floating-menu a
+    {
+        font-size: 0.7rem;
+    }
+    .floating-menu
+    {
+        display:none;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-title {
+        font-size: 1.4rem; 
+    }
+
+    .list-unstyled li {
+        font-size: 1rem;
+    }
+    .floating-menu a
+    {
+        font-size: 1rem;
+    }
+}

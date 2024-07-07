@@ -1,0 +1,26 @@
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2.5;
+    object-fit: cover;
+}
+
+.product-card {
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border: 5px solid var(--third-color);
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: var(--secondary-font-color);
+}
+
+.sale-price {
+    color: var(--primary-font-color);
+    font-weight: bold;
+}

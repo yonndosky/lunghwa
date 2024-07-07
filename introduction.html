@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Carousel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/navbar.css" type="text/css" rel="stylesheet">
+    <link href="/css/global.css" type="text/css" rel="stylesheet">
+    <link href="/css/intro.css" type="text/css" rel="stylesheet">
+    <script defer>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuLinks = document.querySelectorAll('.floating-menu a');
+
+            function updateActiveLink() {
+                const currentHash = window.location.hash;
+
+                menuLinks.forEach(link => {
+                    const sectionId = link.getAttribute('href');
+
+                    if (sectionId === currentHash) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            updateActiveLink();
+
+            // 監聽捲動事件，並在捲動時調用更新函式
+            window.addEventListener('scroll', updateActiveLink);
+        });
+    </script>
+
+</head>
+
+<body id="top">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/50" alt="Logo" width="50" height="50"
+                    class="d-inline-block align-text-top">
+                <span>__Name__</span>
+            </a>
+            <button class="btn btn-custom btn-sm rounded-pill ms-auto"
+                    style="padding: 0.2rem 0.4rem; font-size: 0.7rem;">
+                <a href="login.html" style="color: white; text-decoration: none;">會員專區</a>
+            </button>
+        </div>
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button ms-auto" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/1080x420/393939/FFFFFF" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1080x420/191919/FFFFFF" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1080x420/292929/FFFFFF" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next ms-auto" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div id="section1"></div>
+    <div class="container mt-5">
+        <div class="card custom-card">
+            <div class="card-body">
+                <h5 class="card-title fs-6">商品說明</h5>
+                <ul class="list-unstyled">
+                    <li><span class="circle-bullet"></span>項目一</li>
+                    <li><span class="circle-bullet"></span>項目二</li>
+                    <li><span class="circle-bullet"></span>項目三</li>
+                    <li><span class="circle-bullet"></span>項目四</li>
+                    <li><span class="circle-bullet"></span>項目五</li>
+                </ul>
+            </div>
+        </div>
+        
+    <div id="section2"></div>
+    <div class="container mt-5">
+        <div class="card custom-card">
+            <div class="card-body">
+                <h5 class="card-title">選擇方案</h5>
+                <div class="mb-3">
+                    <h6>方案A: <del>TWD4,500</del> <span class="text-yellow">TWD3,000</span></h6>
+                    <ul class="list-unstyled ms-4">
+                        <li><span class="circle-bullet"></span>項目一</li>
+                        <li><span class="circle-bullet"></span>項目二</li>
+                        <li><span class="circle-bullet"></span>項目三</li>
+                        <li><span class="circle-bullet"></span>項目四</li>
+                        <li><span class="circle-bullet"></span>項目五</li>
+                    </ul>
+                </div>
+                <div class="mb-3">
+                    <h6>方案B: <del>TWD5,500</del> <span class="text-yellow">TWD3,200</span></h6>
+                    <ul class="list-unstyled ms-4">
+                        <li><span class="circle-bullet"></span>項目一</li>
+                        <li><span class="circle-bullet"></span>項目二</li>
+                        <li><span class="circle-bullet"></span>項目三</li>
+                        <li><span class="circle-bullet"></span>項目四</li>
+                        <li><span class="circle-bullet"></span>項目五</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section3"></div>
+    <div class="container mt-5">
+        <div class="card custom-card">
+            <div class="card-body">
+                <h5 class="card-title fs-6">行程介紹</h5>
+                <ul class="list-unstyled">
+                    <li><span class="circle-bullet"></span>項目一</li>
+                    <li><span class="circle-bullet"></span>項目二</li>
+                    <li><span class="circle-bullet"></span>項目三</li>
+                    <li><span class="circle-bullet"></span>項目四</li>
+                    <li><span class="circle-bullet"></span>項目五</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="section4"></div>
+    <div class="container mt-5">
+        <div class="card custom-card">
+            <div class="card-body">
+                <h5 class="card-title fs-6">購買須知</h5>
+                <ul class="list-unstyled">
+                    <li><span class="circle-bullet"></span>項目一</li>
+                    <li><span class="circle-bullet"></span>項目二</li>
+                    <li><span class="circle-bullet"></span>項目三</li>
+                    <li><span class="circle-bullet"></span>項目四</li>
+                    <li><span class="circle-bullet"></span>項目五</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="floating-menu">
+        <a href="#top" class="nav-link rounded-pill">頂部</a>
+        <a href="#section1" class="nav-link rounded-pill">商品說明</a>
+        <a href="#section2" class="nav-link rounded-pill">選擇方案</a>
+        <a href="#section3" class="nav-link rounded-pill">行程介紹</a>
+        <a href="#section4" class="nav-link rounded-pill">購買須知</a>
+    </div>
+
+    <footer class="container mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-md-start">
+                    <p class="fs-sm-9 mb-md-0">XXX旅行社</p>
+                    <p class="fs-sm-9 mb-md-0">33306 桃園市龜山區萬壽路一段300號 綜合大樓</p>
+                    <p class="fs-sm-9 mb-md-0">No. 300, Sec 1, Wanshou Rd., Guishan District, Taoyuan City, 33326,
+                        Taiwan (R.O.C.)</p>
+                    <p class="fs-sm-9 mb-md-0">連絡電話</p>
+                    <p class="fs-sm-9 mb-md-0">單位信箱</p>
+                    <p class="fs-sm-9 mb-md-0">本網站之智慧財產權屬「XXX旅行社」所有，未經許可，請勿肆意轉載。</p>
+                    <p class="fs-sm-9 mb-md-3">© 2024 Department of Computer Information and Network Engineering,
+                        Lunghwa University of Science and Technology. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

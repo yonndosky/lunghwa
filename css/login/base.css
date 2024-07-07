@@ -1,0 +1,218 @@
+.custom-card {
+    width: 90%;
+    height: 80vh;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    border: 2px solid var(--third-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.info-section,
+.actions-section {
+    padding: 20px;
+}
+
+.action-button {
+    width: 60%;
+    max-width: 200px;
+    margin: 0 auto 10px;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+}
+
+.separator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 1px solid #fff;
+    height: 100%;
+}
+
+.form-label,
+.fw-bold,
+.form-control,
+h2,
+p,
+a {
+    color: var(--primary-font-color);
+}
+
+.form-label {
+    margin-bottom: 0;
+    padding-right: 10px;
+    display: inline-block;
+    width: 20%;
+    text-align: right;
+}
+
+.form-control {
+    display: inline-block;
+    width: 75%;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom: 2px solid var(--third-color);
+}
+
+@media (max-width: 768px) {
+    .custom-card {
+        height: auto;
+    }
+
+    .separator {
+        border-left: none;
+        border-top: 1px solid #fff;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.custom-card .front,
+.custom-card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.custom-card .back {
+    transform: rotateY(180deg);
+}
+
+.custom-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.toggle-button {
+    cursor: pointer;
+    color: var(--primary-font-color);
+    text-decoration: underline;
+}
+
+.vertical {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 150px;
+    }
+
+    div,
+    .btn {
+        font-size: 12px;
+    }
+
+    .vertical {
+        display: block;
+    }
+
+    .horizontal {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 400px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        animation: flipInX 0.5s both;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        animation: flipInX 0.5s both;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        background-color: #7BA23F;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        animation: flipInX 0.5s both;
+    }
+
+    .btn:hover {
+        background-color: #86C166;
+    }
+
+    .switch {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        text-align: center;
+        animation: flipInX 0.5s both;
+    }
+
+    .switch a {
+        text-decoration: none;
+        color: #7BA23F;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .switch a:hover {
+        color: #86C166;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+        animation: flipInX 0.5s both;
+    }
+}
+
+
+@media (min-width: 768px) {
+    div.btn {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    div.btn {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,60 @@
+:root {
+    --card-primary-color:#91B493;
+    --primary-color: #86C166;
+    --secondary-color: #32d33e;
+    --third-color: #229129;
+    --base-font-size: 16px;
+    --primary-font-color: #fafafa;
+    --secondary-font-color: #5ef468;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    padding-top: 70px;
+    padding-left: 2%;
+    padding-right: 2%;
+    overflow-x: hidden;
+    /* padding-bottom: 100px; */
+}
+
+.section-spacing {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: left;
+    /* background-color: var(--secondary-color); */
+    color: var(--primary-font-color);
+    width: 100%;
+    font-size: 14px;
+}
+
+h5 {
+    color: var(--primary-font-color);
+}
+
+.card-title {
+    color: var(--primary-font-color);
+
+}
+
+
+
+@media (max-width: 576px) {
+    footer {
+        font-size: 12px; /* 在小型設備上較小的文字大小 */
+    }
+}
+
+@media (min-width: 768px) {
+    footer {
+        font-size: 16px; /* 在平板設備上稍大的文字大小 */
+    }
+}
+
+@media (min-width: 992px) {
+    footer {
+        font-size: 14px; /* 在桌面設備上恢復到預設的文字大小 */
+    }
+}
