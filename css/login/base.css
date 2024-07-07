@@ -132,6 +132,7 @@ a {
     }
 
     .container1 {
+        margin:0 auto;
         width: 90%;
         max-width: 400px;
         background-color: white;
